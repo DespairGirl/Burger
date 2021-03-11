@@ -34,17 +34,19 @@
 <form class="add-burger">
 
   <div class="form-group">
-    <label for="ca">Burger Name:</label>
+    <label id="burgername" for="ca">Burger Name:</label>
     <input type="text" id="ca" name="name">
     <input type="hidden" name="devour" value="0">
   </div>
 
-  <div class="form-group">
-    <label for="chomp">CHOMPED??!</label><br>
+  <div id="twoform" class="form-group">
+    <label  for="chomp">CHOMPED??!</label><br>
     <input type="radio" name="devour" value="1" id="devoured" checked> CHOMPED<br>
     <input type="radio" name="devour" value="0" id="noeat"> No CHOMP
   </div>
 
-  <button type="submit">Add Burger</button>
+  <button id="buttons" type="submit">Add Burger</button>
 </form>
+
+  
 </div>
