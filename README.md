@@ -3,8 +3,8 @@
 ## **Description**
 This is an application that will allow users to input burgers that they have either eaten before, or want to eat in the future. The user can delete entries and move entries to different categories with the click of a button.
 ---
-## **HEROKU**
-[Burgers]("https://thawing-meadow-67728.herokuapp.com/")
+## **HEROKU APP**
+[CLICK HERE](https://thawing-meadow-67728.herokuapp.com/)
 
 
 ## Screenshots
