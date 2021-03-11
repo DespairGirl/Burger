@@ -1,4 +1,4 @@
-const { networkInterfaces } = require("node:os");
+
 
 $(function(){
  $(".eat-burger").on("click", function(event){
@@ -15,7 +15,7 @@ $(function(){
             Accept: 'application/json',
             'Content-Type': 'application/json',
           },
-          data: newDevourState 
+          data: newDevourState
      })
      .then(function(){
          console.log("changed state to:", newDevour);
@@ -30,9 +30,9 @@ $(function(){
 
      const newBurger ={
          name: $("#ca").val().trim(),
-         devour: $("#devoured").checked
+         devour: $("[name=devour]").val().trim()
      };
-     $.ajax("api/burgers/" + id,{
+     $.ajax("api/burgers/",{
         method: "POST",
         headers: {
            Accept: 'application/json',
@@ -41,14 +41,14 @@ $(function(){
          data: newBurger
     })
     .then(function(){
-        $("#ca").val()= '';
+        
         console.log("added a new burger!");
         location.reload();
     });
  });
 
- $(".delete-burger").forEach(button.on("click", function(event){
-     const id= event.attr("data-id");
+ $(".delete-burger").on("click", function(event){
+     const id= $(this).prop("data-id");
 
      $.ajax("api/burgers/" + id,{
         method: "DELETE",
@@ -62,5 +62,5 @@ $(function(){
 
 
 
- }))
+ })
 });
