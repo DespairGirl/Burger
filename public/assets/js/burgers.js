@@ -11,10 +11,7 @@ $(function(){
 
      $.ajax("api/burgers/" + id,{
          method: "PUT",
-         headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
+         
           data: newDevourState
      })
      .then(function(){
@@ -34,10 +31,8 @@ $(function(){
      };
      $.ajax("api/burgers/",{
         method: "POST",
-        headers: {
-           Accept: 'application/json',
-           'Content-Type': 'application/json',
-         },
+        
+         
          data: newBurger
     })
     .then(function(){
@@ -48,14 +43,14 @@ $(function(){
  });
 
  $(".delete-burger").on("click", function(event){
-     const id= $(this).prop("data-id");
+     const id= $(this).data("id");
 
      $.ajax("api/burgers/" + id,{
         method: "DELETE",
         
     })
-    .then(function(res){
-        console.log(res);
+    .then(function(){
+        
         console.log("Burger Deleted")
         location.reload();
     });
